@@ -46,6 +46,7 @@ const useFetch = (endpoint, query) => {
 
   const fetchData = async () => {
     setIsLoading(true);
+    console.log("job_id:", query.job_id); // Add this line
     try {
       const response = await axios.request(options);
       setData(response.data.data);
